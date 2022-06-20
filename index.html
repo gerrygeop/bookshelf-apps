@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Bookshelf Apps</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bookshelf Apps</h1>
+    </header>
+
+    <main>
+        <section class="box-header">
+            <input type="search" id="searchBook" class="input-form" placeholder="Cari judul buku" onkeyup="search()">
+            <button type="button" class="btn btn-primary" onclick="showModal()">Tambah</button>
+        </section>
+
+        <hr>
+
+        <section class="grid-layout">
+            <div class="bookshelf">
+                <h4 class="bookshelf-title">#belum selesai dibaca</h4>
+                <div class="item-list" id="unfinished"></div>
+            </div>
+            <div class="bookshelf">
+                <h4 class="bookshelf-title">#sudah selesai dibaca</h4>
+                <div class="item-list" id="finished"></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <form id="formInputBook">
+                <div class="form-item">
+                    <label for="inputTitle" class="label-form">Judul</label>
+                    <input type="text" id="inputTitle" class="input-form" required autofocus>
+                </div>
+
+                <div class="form-item">
+                    <label for="inputAuthor" class="label-form">Penulis</label>
+                    <input type="text" id="inputAuthor" class="input-form" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="inputYear" class="label-form">Tahun</label>
+                    <input type="number" id="inputYear" class="input-form" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="inputIsComplete" class="label-checkbox">
+                        <input type="checkbox" id="inputIsComplete" class="input-checkbox">
+                        <span>Sudah dibaca</span>
+                    </label>
+                </div>
+                
+                <div class="modal-action">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="confirmModal">
+        <div class="modal-box">
+            <h3 id="bookTitle"></h3>
+            <div class="modal-action">
+                <button type="button" class="btn btn-secondary" onclick="closeModal()">Batal</button>
+                <button type="button" class="btn btn-danger" id="deleteButton">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/search.js"></script>
+
+</body>
+</html>

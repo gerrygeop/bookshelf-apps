@@ -1,0 +1,48 @@
+@import url("./root.css");
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 0.5rem 1rem;
+    background-color: rgb(30 41 59 / 0.8);
+    transition: all 200ms;
+}
+
+.modal-box {
+    position: relative;
+    margin: 0 auto;
+    padding: var(--size-lg);
+
+    max-width: 42rem;
+    overflow: hidden;
+
+    border-radius: var(--size-sm);
+    background-color: var(--white);
+    animation-name: animatetop;
+    animation-duration: 0.3s
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-action {
+    text-align: end;
+    margin-top: var(--size-lg);
+}
+
+@media (min-width: 768px) {
+    .modal {
+        padding: 4rem 0;
+    }
+
+    .modal-box {
+        padding: var(--size-lg) 2rem;
+    }
+}

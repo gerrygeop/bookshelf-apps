@@ -1,0 +1,52 @@
+@import url("./root.css");
+
+.form-item {
+    margin: var(--size-base) 0;
+}
+
+.label-form {
+    font-size: var(--size-md);
+    font-weight: 600;
+    color: var(--gray-5);
+    text-transform: uppercase;
+}
+
+.input-form {
+    width: 100%;
+    color: var(--gray-7);
+    background-color: var(--gray-0);
+    padding: var(--size-xs) var(--size-md);
+
+    border: 1px solid var(--gray-3);
+    border-radius: var(--size-xxs);
+    box-shadow: var(--shadow-1);
+}
+
+.input-form:focus {
+    border-color: var(--indigo-5);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.label-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.input-checkbox {
+    color: var(--gray-7);
+    background-color: var(--white);
+    padding: var(--size-xs) var(--size-md);
+
+    border: 1px solid var(--gray-3);
+    box-shadow: var(--shadow-1);
+    border-radius: var(--size-xxs);
+}
+
+.label-checkbox span {
+    font-size: var(--size-base);
+    color: var(--gray-7);
+    margin-left: var(--size-sm);
+}

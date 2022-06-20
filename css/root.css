@@ -1,0 +1,54 @@
+:root {
+    --white: #ffffff;
+
+    --gray-0: #F8FAFC;
+    --gray-2: #E2E8F0;
+    --gray-3: #CBD5E1;
+    --gray-5: #64748B;
+    --gray-6: #475569;
+    --gray-7: #334155;
+    --gray-8: #1E293B;
+
+    --indigo-3: #A5B4FC;
+    --indigo-5: #6366F1;
+    --indigo-6: #4F46E5;
+    --indigo-7: #4338CA;
+
+    --red-5: #F43F5E;
+    --red-6: #E11D48;
+    --red-7: #BE123C;
+
+    --shadow-1: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-2: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+    --size-xxs: 0.25rem;
+    --size-xs: 0.375rem;
+    --size-sm: 0.5rem;
+    --size-md: 0.75rem;
+    --size-base: 1rem;
+    --size-lg: 1.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: var(--gray-2);
+}
+
+input, button {
+    font-size: var(--size-base);
+}
+
+hr {
+    height: 0;
+    border-top: 1px;
+    border-color: var(--gray-2);
+}

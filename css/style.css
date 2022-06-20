@@ -1,0 +1,191 @@
+@import url("./root.css");
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: var(--size-lg) 0;
+    color: var(--gray-6);
+    font-family: serif;
+}
+
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 var(--size-xxs);
+
+    background-color: var(--white);
+    box-shadow: var(--shadow-2);
+    border-radius: var(--size-sm);
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--size-base);
+}
+
+.box-header input {
+    width: 18rem;
+}
+
+.btn {
+    padding: var(--size-sm) var(--size-base);
+    border-radius: var(--size-xs);
+
+    font-weight: 600;
+    font-size: var(--size-md);
+    letter-spacing: 0.1em;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: var(--indigo-6);
+    border: 1px solid transparent;
+}
+.btn-primary:hover {
+    background-color: var(--indigo-5);
+}
+.btn-primary:focus {
+    border-color: var(--indigo-3);
+}
+
+.btn-danger {
+    color: #ffffff;
+    background-color: var(--red-6);
+    border: 1px solid transparent;
+}
+
+.btn-danger:hover {
+    background-color: var(--red-5);
+}
+
+.btn-danger:focus {
+    border-color: var(--red-5);
+}
+
+.btn-secondary {
+    border: 1px solid var(--gray-5);
+    background-color: transparent;
+    color: var(--gray-5);
+}
+
+.btn-secondary:hover {
+    color: var(--gray-7);
+    border-color: var(--gray-7);
+}
+
+.btn-secondary:focus {
+    border-color: var(--gray-8);
+}
+
+.grid-layout {
+    display: grid;
+    column-gap: 0;
+    row-gap: var(--size-sm);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.bookshelf {
+    padding: var(--size-base);
+    grid-column: span 1 / span 1;
+}
+
+.bookshelf-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-5);
+    text-transform: uppercase;
+    margin-bottom: var(--size-sm);
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    margin-bottom: var(--size-sm);
+    padding: var(--size-md) var(--size-base);
+    border: 1px solid var(--gray-2);
+    border-radius: var(--size-xs);
+}
+
+.item .book-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: var(--size-xxs);
+    color: var(--gray-7);
+}
+
+.item .book-information {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    color: var(--gray-6);
+}
+
+.item .item-action {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: var(--size-sm);
+}
+
+.btn-primary-border {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--indigo-7);
+}
+
+.btn-primary-border:hover {
+    color: var(--indigo-6);
+    border: 1px solid var(--indigo-6);
+}
+
+.btn-danger-border {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--red-7);
+}
+
+.btn-danger-border:hover {
+    color: var(--red-6);
+    border: 1px solid var(--red-6);
+}
+
+.shadow-1 {
+    box-shadow: var(--shadow-2);
+}
+
+.shadow-2 {
+    box-shadow: var(--shadow-2);
+}
+
+@media (min-width: 820px) {
+    main {
+        padding: 0;
+    }
+
+    .box-header input {
+        width: 24rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bookshelf {
+        row-gap: 0;
+        column-gap: var(--size-xxs);
+    }
+}
